@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <div class="container">
-        <div class="main-nav">
-
-            <ul class="navbar">
-                <li><a href="/">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="">My Project</a></li>
-            </ul>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <ul class="navbar flex flex-center content-center">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#project">Project</a></li>
+      </ul>
+    </header>
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="content">
+          <h1>Hello Everyone!</h1>
+          <img src="/images/casual.png" alt="" class="img-width" />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Recusandae, architecto?
+          </p>
         </div>
-        <div class="section">
-            <div class="title">
-                <h2>Welcome To My Channel</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, architecto?</p>
-            </div>
-
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="container">
+        <h3 class="heading">About US</h3>
+        <div class="flex content-center">
+          <div class="col">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+              repudiandae sequi quia laborum autem ullam mollitia magnam
+              blanditiis, cum dolorum libero obcaecati dolore est, laboriosam
+              aut. Fugit, mollitia? Aperiam, vel. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Minima vel fugiat, velit enim ipsa
+              tenetur nesciunt nisi delectus, eveniet dignissimos maiores
+              excepturi, neque ipsum modi quo odio possimus quasi voluptatem
+            </p>
+          </div>
+          <div class="col">
+            <img src="images/about.jpg" alt="" />
+          </div>
         </div>
-        <div class="about-section" id="#about">
-            <div class="content">
-                <h4 class="heading">About US</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem repudiandae sequi quia laborum autem
-                    ullam mollitia magnam blanditiis, cum dolorum libero obcaecati dolore est, laboriosam aut. Fugit,
-                    mollitia? Aperiam, vel.</p>
+      </div>
+    </section>
+    <section class="project" id="project">
+      <div class="container">
+        <h3 class="heading">My Projects</h3>
+        <div class="flex flex-center content-center">
+          <div class="card">
+            <img src="images/File 1.jpg" alt="" />
+            <div class="card-body">
+              <h3>Project 1</h3>
             </div>
-            <div class="about-img">
-                <img src="images/about.jpg" alt="">
+          </div>
+          <div class="card">
+            <img src="images/File 2.jpg" alt="" />
+            <div class="card-body">
+              <h3>Project 2</h3>
             </div>
+          </div>
+          <div class="card">
+            <img src="images/File 1.jpg" alt="" />
+            <div class="card-body">
+              <h3>Project 3</h3>
+            </div>
+          </div>
         </div>
-        <div class="project-section">
-            <div class="heading">
-                <h3>My Projects</h3>
-            </div>
-            <div class=" project">
-                <div class="card">
-                    <img src="images/about.jpg" alt="">
-                    <h4>My Files</h4>
-                </div>
-                <div class="card">
-                    <img src="images/about.jpg" alt="">
-                    <h4>My Name</h4>
-                </div>
+      </div>
+    </section>
+    <script>
+      // Smooth scrolling animation
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
 
-                <div class="card">
-                    <img src="images/about.jpg" alt="">
-                    <h4>My Code</h4>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</body>
-
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
 </html>
